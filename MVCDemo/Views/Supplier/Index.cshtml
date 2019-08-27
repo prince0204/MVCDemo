@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVCDemo.Models.Supplier>
+@using MVCDemo.Models;
+@{
+    ViewBag.Title = "Suppliers List";
+}
+
+<div style="font-family:Arial">
+    <h2>Suppliers List</h2>
+     <ul>
+        @foreach(Supplier supplier in @Model)
+        {
+            <li>
+                @Html.ActionLink(supplier.CompanyName, "Index","Product",new { supplierId = supplier.Id },null)
+            </li>
+        }
+    </ul>
+
+</div>

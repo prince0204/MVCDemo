@@ -1,0 +1,45 @@
+﻿@model MVCDemo.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+  <div>
+<h2>Product Details</h2>
+
+<table style="font-family:Arial">
+    <tr>
+        <td>
+            <b>Id:</b>
+        </td>
+        <td>
+            <b>@Model.Id</b>
+        </td>
+     </tr>
+    <tr>
+        <td>
+            <b>ProductName:</b>
+        </td>
+        <td>
+            <b>@Model.ProductName</b>
+        </td>
+     </tr>
+    <tr>
+        <td>
+            <b>UnitPrice:</b>
+        </td>
+        <td>
+            <b>@Model.UnitPrice</b>
+        </td>
+     </tr>
+    <tr>
+    <tr>
+        <td>
+            <b>Package:</b>
+        </td>
+        <td>
+            <b>@Model.Package</b>
+        </td>
+     </tr>
+ </table>
+@Html.ActionLink("Back to List", "Index", new { supplierId=@Model.SupplierId})
+    </div>
